@@ -41,7 +41,7 @@ gem 'jquery-rails'
 gem 'grape'
 
 # Uploader
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.2.0"
 
 # Trailblazer
 gem "trailblazer", '2.0.2'
