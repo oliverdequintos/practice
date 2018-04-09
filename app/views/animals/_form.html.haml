@@ -1,0 +1,22 @@
+= form_for(@animal) do |f|
+  - if @animal.errors.any?
+    #error_explanation
+      %h2
+        = "#{pluralize(@animal.errors.count, 'error')} prohibited this animal from being saved:"
+      %ul
+        - @animal.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .field
+    = f.label :race
+    %br/
+    = f.select :race, Animal.races.split(' ').map {|r| [r.humanize, r.camelcase]}, {}, disabled: @race != "Animal"
+  .field
+    = f.label :age
+    %br/
+    = f.text_field :age
+  .actions
+    = f.submit
