@@ -18,6 +18,10 @@
         %td
           = animal.age
         %td
-          = link_to 'Show', '#'
+          = link_to 'Show', sti_animal_path(animal.race, animal)
           = link_to 'Edit', '#'
           = link_to 'Destroy', '#', method: :destroy, data: { confirm: 'Are you sure?' }
+          = link_to "See all #{animal.race.pluralize}", sti_animal_path(animal.race)
+
+= link_to 'See all animals', sti_animal_path
+= link_to "New #{@race}", sti_animal_path(@race, nil, :new)
