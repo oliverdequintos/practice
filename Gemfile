@@ -40,6 +40,9 @@ gem 'jquery-rails'
 # API
 gem 'grape'
 
+# Authentication
+gem 'devise'
+
 # Uploader
 gem "paperclip", "~> 5.2.0"
 
