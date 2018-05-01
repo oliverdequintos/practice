@@ -27,5 +27,9 @@ module Practice
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    #for grape
+    config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
+    config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
   end
 end
