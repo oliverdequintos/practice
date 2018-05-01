@@ -30,6 +30,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+  # RSpec driven API testing framework
+  gem 'airborne'
+end
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Templating and Design
@@ -39,6 +44,8 @@ gem 'jquery-rails'
 
 # API
 gem 'grape'
+gem 'grape_on_rails_routes' # rake task to expose grape api routes
+gem 'grape-entity'
 
 # Uploader
 gem "paperclip", "~> 5.2.0"
